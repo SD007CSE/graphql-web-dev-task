@@ -1,6 +1,6 @@
-import pkg from '@apollo/client/core';
-const { ApolloClient, InMemoryCache, createHttpLink } = pkg;
+import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
+import { createHttpLink } from '@apollo/client/link/http';
 
 const httpLink = createHttpLink({
   uri: 'https://api-qa.seamasterai.com/graphql',
